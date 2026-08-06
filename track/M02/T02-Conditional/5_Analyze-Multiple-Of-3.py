@@ -3,7 +3,7 @@ target = int(input())
 
 count = 0
 total = 0
-found = "No"
+found = False
 
 # Examine every number from 1 to the limit
 for i in range(1,limit+1):
@@ -12,10 +12,11 @@ for i in range(1,limit+1):
         count+=1
         total=total+i
         if i==target:
-            found="Yes"
-
-
+            found=True
 # Display the count, total and search result
 print("Count:",count)
 print("Sum:",total)
-print("Target Found:",found)
+if found:
+    print("Target Found: Yes")
+else:
+    print("Target Found: No")
